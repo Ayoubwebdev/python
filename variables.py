@@ -73,14 +73,14 @@ print(text4)
 
  # /n est équivalent à un saut de ligne
  # /t est équivalent à une tabulation
- text5="<div>/n/t<h1>Titre_de_premier_niveau</h1>/n</div>/n"
+ 
 
- print(text5)
+ 
 
  # la backslash seul est le caractère d'échappement
  # \"est équivalent à une guillemet
  # \\ est équivalent à un back slash \
- text6 = "Foo \"Bar\"Baz"
+ text6 = "Foo\"Bar\"Baz"
  text7 = "C:\\Program Files\\Foo"
  print(text7)
  
@@ -92,9 +92,13 @@ print(text4)
  c = b
  b = a 
  a = c
-
+ 
+ # permutation  des valeures à l'aide de la méthode pythonique
+ # destructured assignment 
+b,a = a, b
  print(a)
  print(b)
+
 
 
  # permutation des valeurs à l'aide d'opérations arithmétiques
@@ -104,5 +108,24 @@ print(text4)
 
  print(a)
  print(b)
- 
+
+ # addition de float
+ # affiche 0.30000000000000004 au lieu de 0.3
+ print (0.1 + 0.1 +0.1)
+
+import decimal
+ from decimal import Decimal 
+
+ # affiche correctement 0.3
+ print (Decimal("0.1")+ Decimal ("0.1")+ Decimal("0.1"))
+
+ # affiche correctement 0.3
+ print (Decimal("0.3"))
+
+# arrondi des floats
+ decimal.getcontext().rounding = decimal.ROUND_HALF_UP
+print Decimal("0.5").quantize(Decimal("1")) # Decimal('1')
+print (Decimal("1.5").quantize(Decimal("1")) # Decimal('2')
+
+
  
